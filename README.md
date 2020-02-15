@@ -26,6 +26,11 @@ Download the project by cloning it:
 git clone git@github.com:ahmetcetin39/kalah-game.git
 ```
 
+Run the unit tests:
+```
+mvn test
+```
+
 Run the application from an IDE with a default profile. Or run this from terminal:
 ```
 mvn spring-boot:run
