@@ -6,8 +6,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import static com.kalah.model.Board.*;
 
@@ -15,7 +17,7 @@ import static com.kalah.model.Board.*;
  * This is the controller where Kalah game endpoints exist.
  *
  * @author Ahmet Cetin
- * @since 2020-01-16
+ * @since 2020-02-12
  */
 @RestController
 @RequiredArgsConstructor
@@ -36,10 +38,6 @@ public class GameController {
 
     @PutMapping("/games/{gameId}/play/{houseIndex}")
     public ResponseEntity playRound(@PathVariable String gameId, @PathVariable Integer houseIndex) {
-        if (StringUtils.isEmpty(gameId) || houseIndex == null) {
-            throw new IllegalArgumentException("Both gameId and houseIndex should be provided!");
-        }
-
         if (houseIndex < MIN_HOUSE_INDEX || PLAYER_2_STORE_INDEX <= houseIndex || houseIndex == PLAYER_1_STORE_INDEX) {
             throw new IllegalArgumentException("House index should be between 0 and 13 and not 6!");
         }

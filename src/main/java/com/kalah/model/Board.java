@@ -1,5 +1,6 @@
 package com.kalah.model;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -11,10 +12,11 @@ import java.util.stream.IntStream;
  * Kalah Board contains 6 houses and 1 store per player.
  *
  * @author Ahmet Cetin
- * @since 2020-01-16
+ * @since 2020-02-15
  */
 @Getter
 @ToString
+@EqualsAndHashCode
 public class Board {
     public static final int MIN_HOUSE_INDEX = 0;
     public static final int PLAYER_1_STORE_INDEX = 6;
@@ -23,7 +25,7 @@ public class Board {
 
     private int[] houses = new int[14];
 
-    public Board() {
+    Board() {
         IntStream.range(MIN_HOUSE_INDEX, PLAYER_1_STORE_INDEX)
                 .forEach(i -> houses[i] = INITIAL_STONE_COUNT_PER_HOUSE);
         IntStream.range(PLAYER_1_STORE_INDEX + 1, PLAYER_2_STORE_INDEX)
