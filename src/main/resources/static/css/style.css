@@ -1,0 +1,64 @@
+.fancy {
+  text-align : center;
+  padding : 1em;
+  border : 0.3em solid black;
+  width  : 4em;
+  height : 4em;
+  border-radius: 100%;
+  background-color: lightblue;
+}
+
+.store-player-1 {
+  background-color: #ffbc00;
+}
+
+.store-player-2 {
+  background-color: #8bd81f;
+}
+
+.active-player {
+  background-color: #a3ffff;
+}
+
+.player {
+  background-color: #d8d271;
+  text-align: center;
+  font-size: 36px;
+  padding: 5px;
+  border: 0.1em solid #5d9dd8;
+  border-radius: 40%;
+}
+
+.board {
+  border : 0.5em solid black;
+  border-radius: 25%;
+  background-color: beige;
+}
+
+.new-game {
+  border : 0.1em solid black;
+  background-color: lightgreen;
+  border-radius: 10%;
+}
+
+.align-center {
+  margin: 0 auto;
+}
+
+.font-large {
+  font-size: 50px;
+}
+
+.bottom-panel {
+  font-size: 32px;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-20 {
+  width: 20%;
+}
