@@ -1,7 +1,7 @@
 # What is this?
 This is a Spring Boot based web application which has a UI to be able to play Kalah game.
 
-This application is built on Spring Boot 2.2 with Maven and uses Java 1.8 and AngularJS to render UI.
+This application is built on Spring Boot 2.2 with Maven and uses Java 11 and AngularJS to render UI.
 
 * It is possible to play multiple games at the same time since each game is stored in memory using game id.
 

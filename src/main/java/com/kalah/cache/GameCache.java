@@ -22,7 +22,7 @@ public class GameCache {
     }
 
     public void updateGameInCache(Game game) {
-        Game gameInCache = gameMap.get(game.getId());
+        var gameInCache = gameMap.get(game.getId());
         if (gameInCache == null) {
             throw new ResourceNotFoundException("No game found with id: " + game.getId());
         }
@@ -30,7 +30,7 @@ public class GameCache {
     }
 
     public Game getGameFromCache(String gameId) {
-        Game gameInCache = gameMap.get(gameId);
+        var gameInCache = gameMap.get(gameId);
         if (gameInCache == null) {
             throw new ResourceNotFoundException("No game found with id: " + gameId);
         }

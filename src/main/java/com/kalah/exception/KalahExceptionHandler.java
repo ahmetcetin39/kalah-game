@@ -18,20 +18,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class KalahExceptionHandler extends ResponseEntityExceptionHandler {
     private static final String HANDLING_EXCEPTION_MESSAGE = "Handling exception: ";
 
-    @ExceptionHandler(GameInitiatorException.class)
-    public final ResponseEntity handleGameInitiatorException(GameInitiatorException e) {
-        log.info(HANDLING_EXCEPTION_MESSAGE + e.getMessage());
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-    }
-
-    @ExceptionHandler(WrongPlayerException.class)
-    public final ResponseEntity handleWrongPlayerException(WrongPlayerException e) {
-        log.info(HANDLING_EXCEPTION_MESSAGE + e.getMessage());
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-    }
-
-    @ExceptionHandler(EmptyHouseException.class)
-    public final ResponseEntity handleEmptyHouseException(EmptyHouseException e) {
+    @ExceptionHandler({GameInitiatorException.class, WrongPlayerException.class, EmptyHouseException.class, IllegalArgumentException.class})
+    public final ResponseEntity handleBadRequest(Exception e) {
         log.info(HANDLING_EXCEPTION_MESSAGE + e.getMessage());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
     }

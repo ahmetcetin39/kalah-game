@@ -21,7 +21,7 @@ import static com.kalah.model.Board.*;
  * This is the service implementation of game service which contains the logic of Kalah game.
  *
  * @author Ahmet Cetin
- * @since 2020-01-16
+ * @since 2020-02-15
  */
 @Service
 @RequiredArgsConstructor
@@ -31,23 +31,16 @@ public class GameServiceImpl implements GameService {
 
     @Override
     public Game initBoard() {
-        return Game.builder()
-                .gameStatus(GameStatus.NOT_STARTED)
-                .board(new Board(new int[14]))
-                .build();
+        return Game.emptyGame();
     }
 
     @Override
     public Game startGame(GameInitiator gameInitiator) {
-        if (!gameInitiator.equals(GameInitiator.PLAYER_1) && !gameInitiator.equals(GameInitiator.PLAYER_2)) {
+        if (!GameInitiator.PLAYER_1.equals(gameInitiator) && !GameInitiator.PLAYER_2.equals(gameInitiator)) {
             throw new GameInitiatorException("Invalid game initiator. Game initiator should be either PLAYER_1 or PLAYER_2");
         }
 
-        Game game = Game.builder()
-                .id(UUID.randomUUID().toString())
-                .board(new Board())
-                .gameStatus(gameInitiator == GameInitiator.PLAYER_1 ? GameStatus.TURN_PLAYER_1 : GameStatus.TURN_PLAYER_2)
-                .build();
+        Game game = Game.newGame(gameInitiator == GameInitiator.PLAYER_1 ? GameStatus.TURN_PLAYER_1 : GameStatus.TURN_PLAYER_2);
 
         gameCache.putGameToCache(game);
         log.info("Game: " + game);
@@ -69,9 +62,9 @@ public class GameServiceImpl implements GameService {
 
     private Game play(Game game, Integer houseIndex) {
         int[] houses = game.getBoard().getHouses();
-        int stoneCountInHand = houses[houseIndex];  // Collect all stones in house to hand.
+        var stoneCountInHand = houses[houseIndex];  // Collect all stones in house to hand.
         houses[houseIndex] = 0;                     // Empty the house
-        int currentIndex = houseIndex + 1;          // Start putting the stones from the next house.
+        var currentIndex = houseIndex + 1;          // Start putting the stones from the next house.
 
         GameStatus gameStatus = null;
 
