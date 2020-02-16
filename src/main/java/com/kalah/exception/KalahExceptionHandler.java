@@ -21,12 +21,12 @@ public class KalahExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler({GameInitiatorException.class, WrongPlayerException.class, EmptyHouseException.class, IllegalArgumentException.class})
     public final ResponseEntity handleBadRequest(Exception e) {
         log.info(HANDLING_EXCEPTION_MESSAGE + e.getMessage());
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ExceptionResponse.of(e.getMessage()));
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public final ResponseEntity handleResourceNotFoundException(ResourceNotFoundException e) {
         log.info(HANDLING_EXCEPTION_MESSAGE + e.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ExceptionResponse.of(e.getMessage()));
     }
 }
