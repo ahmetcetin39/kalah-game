@@ -11,55 +11,111 @@
 
 <table class="board align-center width-50">
     <tbody>
-        <tr>
-            <td colspan="2"></td>
-            <td colspan="2" class="player">PLAYER 2</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr align="center">
-            <td data-ng-click='playRound(game.id, 12)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}"><div class="font-large">{{game.board.houses[12]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 11)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}"><div class="font-large">{{game.board.houses[11]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 10)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}"><div class="font-large">{{game.board.houses[10]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 9)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}"><div class="font-large">{{game.board.houses[9]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 8)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}"><div class="font-large">{{game.board.houses[8]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 7)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}"><div class="font-large">{{game.board.houses[7]}}</div></div></td>
-        </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td class="player" colspan="2">PLAYER 2</td>
+        <td colspan="2"></td>
+    </tr>
+    <tr align="center">
+        <td data-ng-click='playRound(game.id, 12)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}">
+                <div class="font-large">{{game.board.houses[12]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 11)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}">
+                <div class="font-large">{{game.board.houses[11]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 10)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}">
+                <div class="font-large">{{game.board.houses[10]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 9)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}">
+                <div class="font-large">{{game.board.houses[9]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 8)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}">
+                <div class="font-large">{{game.board.houses[8]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 7)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_2'}">
+                <div class="font-large">{{game.board.houses[7]}}</div>
+            </div>
+        </td>
+    </tr>
 
-        <tr align="center">
-            <td><div class="fancy store-player-2"><div class="font-large">{{game.board.houses[13]}}</div></div></td>
-            <td colspan="4"></td>
-            <td><div class="fancy store-player-1"><div class="font-large">{{game.board.houses[6]}}</div></div></td>
-        </tr>
+    <tr align="center">
+        <td>
+            <div class="fancy store-player-2">
+                <div class="font-large">{{game.board.houses[13]}}</div>
+            </div>
+        </td>
+        <td colspan="4"></td>
+        <td>
+            <div class="fancy store-player-1">
+                <div class="font-large">{{game.board.houses[6]}}</div>
+            </div>
+        </td>
+    </tr>
 
-        <tr align="center">
-            <td data-ng-click='playRound(game.id, 0)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}"><div class="font-large">{{game.board.houses[0]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 1)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}"><div class="font-large">{{game.board.houses[1]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 2)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}"><div class="font-large">{{game.board.houses[2]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 3)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}"><div class="font-large">{{game.board.houses[3]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 4)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}"><div class="font-large">{{game.board.houses[4]}}</div></div></td>
-            <td data-ng-click='playRound(game.id, 5)'><div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}"><div class="font-large">{{game.board.houses[5]}}</div></div></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td colspan="2" class="player">PLAYER 1</td>
-            <td colspan="2"></td>
-        </tr>
+    <tr align="center">
+        <td data-ng-click='playRound(game.id, 0)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}">
+                <div class="font-large">{{game.board.houses[0]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 1)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}">
+                <div class="font-large">{{game.board.houses[1]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 2)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}">
+                <div class="font-large">{{game.board.houses[2]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 3)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}">
+                <div class="font-large">{{game.board.houses[3]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 4)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}">
+                <div class="font-large">{{game.board.houses[4]}}</div>
+            </div>
+        </td>
+        <td data-ng-click='playRound(game.id, 5)'>
+            <div class="fancy" ng-class="{'active-player': game.gameStatus == 'TURN_PLAYER_1'}">
+                <div class="font-large">{{game.board.houses[5]}}</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td class="player" colspan="2">PLAYER 1</td>
+        <td colspan="2"></td>
+    </tr>
     </tbody>
 </table>
 
-<table data-ng-if="game.gameStatus == 'NOT_STARTED'" class="align-center bottom-panel width-50">
+<table class="align-center bottom-panel width-50" data-ng-if="game.gameStatus == 'NOT_STARTED'">
     <tr align="center">
         <td colspan="2">WHO STARTS THE GAME?</td>
     </tr>
     <tr align="center">
-        <td data-ng-click='startGame("PLAYER_1")' class="store-player-1">PLAYER 1</td>
-        <td data-ng-click='startGame("PLAYER_2")' class="store-player-2">PLAYER 2</td>
+        <td class="store-player-1" data-ng-click='startGame("PLAYER_1")'>PLAYER 1</td>
+        <td class="store-player-2" data-ng-click='startGame("PLAYER_2")'>PLAYER 2</td>
     </tr>
 </table>
 
-<table data-ng-if="game.gameStatus == 'FINISHED'" class="align-center bottom-panel width-50">
+<table class="align-center bottom-panel width-50" data-ng-if="game.gameStatus == 'FINISHED'">
     <tr>
-        <td><img src="img/cup.png" class="width-20" alt="Winner Cup"></td>
+        <td><img alt="Winner Cup" class="width-20" src="img/cup.png"></td>
     </tr>
     <tr data-ng-if="game.winner == 'EQUAL'">
         <td>Friendship Won!</td>
@@ -72,7 +128,7 @@
     </tr>
 </table>
 
-<table data-ng-if="game.gameStatus == 'FINISHED'" class="bottom-panel new-game align-center width-50">
+<table class="bottom-panel new-game align-center width-50" data-ng-if="game.gameStatus == 'FINISHED'">
     <tr align="center">
         <td data-ng-click='newGame()'>NEW GAME</td>
     </tr>
@@ -86,21 +142,18 @@
     var app = angular.module('kalahApp', []);
     app.controller('gameController', function ($scope, $http) {
 
-        $http.post("/init").then(function(resp){
-            console.log(resp.data);
+        $http.post("/init").then(function (resp) {
             $scope.game = resp.data;
         });
 
         $scope.newGame = function () {
             $http.post("/init").then(function (resp) {
-                console.log(resp.data);
                 $scope.game = resp.data;
             })
         };
 
         $scope.startGame = function (gameInitiator) {
             $http.post("/start/" + gameInitiator).then(function (resp) {
-                console.log(resp.data);
                 $scope.game = resp.data;
             })
         };
@@ -108,21 +161,12 @@
         $scope.playRound = function (gameId, houseIndex) {
             $scope.errorMessage = "";
             $http.put("/games/" + gameId + "/play/" + houseIndex + "").then(function (resp) {
-                console.log(resp.data);
                 $scope.game = resp.data;
                 $scope.houses = resp.data.board.houses;
-
-                $scope.total = 0;
-                angular.forEach(resp.data.board.houses, function (pit, key) {
-                    $scope.total += pit;
-                });
-
             }).catch(function (resp) {
-                console.log(resp);
                 $scope.errorMessage = resp.data.message;
             })
         }
     });
 </script>
 </html>
-
