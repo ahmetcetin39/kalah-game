@@ -5,6 +5,8 @@ This application is built on Spring Boot 2.2 with Maven and uses Java 11 and Ang
 
 * It is possible to play multiple games at the same time since each game is stored in memory using game id.
 
+![Kalah Game Screenshot](src/main/resources/static/img/kalah-screenshot.png)
+
 ## Kalah Game
 Kalah, also called Kalaha or Mancala, is a game in the mancala family imported in the United States.
 
